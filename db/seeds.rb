@@ -14,6 +14,7 @@ name = %w(Lofasz Gosse Csarda Grenuille Jakab)
 address = %w(Paris London Prague Budapest Wien)
 category = ["chinese", "italian", "japanese", "french", "belgian"]
 
+
 10.times do
 
 Restaurant.create!(name: name.sample, address: address.sample, category: category.sample)
