@@ -4,6 +4,6 @@
   <%@restaurants.each do |restaurant| %>
 <li><%=restaurant.name %>  </li>
 <%= link_to "See details", restaurant, class: "btn btn-primary"%>
-
+<%= link_to 'Destroy', restaurant, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-primary" %>
   <% end %>
 </ul>

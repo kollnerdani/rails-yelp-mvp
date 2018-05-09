@@ -2,19 +2,30 @@
 <ul>
   <li>
   <%=@restaurant.category%>
-</li>
+  </li>
   <li>
   <%=@restaurant.address%>
-</li>
+  </li>
+</ul>
 
-<% @restaurant.reviews.each do |review| %>
-  <li> <%=review.content  %></li>
-  <li> <%= "*" * review.rating  %></li>
-<% end %>
-
+<ul>
+  <% @restaurant.reviews.each do |review| %>
+    <li> <%=review.content  %>
+    </li>
+    <li> <%= "*" * review.rating %>
+    </li>
+</ul>
+<%end%>
 <%= link_to "Add Review", new_restaurant_review_path(@restaurant), class: "btn btn-primary"%>
 <%= link_to "Return", restaurants_path, class: "btn btn-primary"%>
 
-
-
-</ul>
+<%loop do
+@restaurant.reviews.each do |review|
+    all_rating = []
+   sum = 0
+   all_rating << review.rating
+   sum = all_rating.sum
+%>
+<%=  %>
+<%end%>
+<%end%>

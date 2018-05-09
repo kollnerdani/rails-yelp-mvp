@@ -14,7 +14,10 @@ class ReviewsController < ApplicationController
       render :new
     end
   end
+  def average
 
+  end
+  end
   private
 
   def review_params
