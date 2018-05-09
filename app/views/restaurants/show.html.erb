@@ -7,9 +7,14 @@
   <%=@restaurant.address%>
 </li>
 
-<% @reviews.each do |review| %>
+<% @restaurant.reviews.each do |review| %>
   <li> <%=review.content  %></li>
+  <li> <%= "*" * review.rating  %></li>
 <% end %>
+
+<%= link_to "Add Review", new_restaurant_review_path(@restaurant), class: "btn btn-primary"%>
+<%= link_to "Return", restaurants_path, class: "btn btn-primary"%>
+
 
 
 </ul>
